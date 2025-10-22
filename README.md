@@ -1,8 +1,11 @@
 # AgnesMillie Portfolio - Web
 
-![Portfolio Screenshot](link_para_screenshot_light.png) ![Portfolio Screenshot Dark](link_para_screenshot_dark.png) ## 📑 Descrição
+![Portfolio Screenshot Light](assets/images/image1.png) 
+![Portfolio Screenshot Dark](assets/images/image2.png) 
 
-Este repositório contém o código-fonte do meu portfólio web pessoal ([agnesmillie.github.io](https://agnesmillie.github.io/)), projetado para apresentar minhas competências como Arquiteta de Software Full Stack. O site é uma *Single Page Application* (SPA) estática, construída com foco em performance, design responsivo e boas práticas de desenvolvimento web.
+## 📑 Descrição
+
+Este repositório contém o código-fonte do meu portfóflio web pessoal ([https://agnesmillie.github.io/](https://agnesmillie.github.io/)), projetado para apresentar minhas competências como Arquiteta de Software Full Stack. O site é uma *Single Page Application* (SPA) estática, construída com foco em performance, design responsivo e boas práticas de desenvolvimento web.
 
 ## ✨ Funcionalidades Principais
 
@@ -40,7 +43,7 @@ Este site está hospedado diretamente via GitHub Pages a partir do branch `main`
 
 ## 📄 Licença
 
-Este projeto é de código aberto sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes (Você precisará criar este arquivo se quiser uma licença formal).
+Este projeto é de código aberto sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
