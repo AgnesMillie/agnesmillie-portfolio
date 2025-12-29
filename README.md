@@ -9,7 +9,7 @@ Este repositório hospeda o código-fonte da versão 2.0 do meu portfólio profi
 
 Diferente de templates genéricos, esta aplicação foi construída do zero (Vanilla JS) para garantir controle total sobre a renderização, acessibilidade e segurança, sem a sobrecarga de frameworks desnecessários para este escopo.
 
-**Live Demo:** [https://agnesmillie.github.io/](https://agnesmillie.github.io/)
+**Live Demo:** [https://agnesmillie.github.io/agnesmillie-portfolio/](https://agnesmillie.github.io/agnesmillie-portfolio/)
 
 ---
 
