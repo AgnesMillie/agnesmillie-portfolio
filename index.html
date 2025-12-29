@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self' https://api.github.com;"
+    />
 
     <title>Agnes Millie | Full Stack Software Architect</title>
 
     <meta
       name="description"
-      content="Portfólio de Agnes Millie, Full Stack Software Architect."
+      content="Portfólio de Agnes Millie, Full Stack Software Architect e Especialista em Cibersegurança."
       data-i18n-key="meta_description"
     />
     <meta name="author" content="Agnes Millie" />
@@ -16,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -24,7 +30,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
@@ -33,9 +38,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="theme-dark">
+    <div class="bg-texture"></div>
+
     <nav class="navbar">
-      <div class="container">
-        <a href="#hero" class="nav-logo">AgnesMillie/&gt;</a>
+      <div class="container navbar-container">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-symbol">&lt;</span>AgnesMillie<span
+            class="logo-symbol"
+            >/&gt;</span
+          >
+        </a>
 
         <ul class="nav-menu">
           <li><a href="#hero" data-i18n-key="nav_home">Início</a></li>
@@ -43,7 +55,7 @@
           <li>
             <a href="#philosophy" data-i18n-key="nav_philosophy">Filosofia</a>
           </li>
-          <li><a href="#journey" data-i18n-key="nav_journey">Trajetória</a></li>
+          <li><a href="#services" data-i18n-key="nav_services">Soluções</a></li>
           <li>
             <a href="#ecosystem" data-i18n-key="nav_ecosystem">Ecossistema</a>
           </li>
@@ -52,7 +64,6 @@
               >Repositórios</a
             >
           </li>
-          <li><a href="#contact" data-i18n-key="nav_contact">Contato</a></li>
         </ul>
 
         <div class="nav-right-group">
@@ -81,9 +92,9 @@
     </nav>
 
     <header id="hero" class="hero-section">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title">AgnesMillie</h1>
+      <div class="container hero-container">
+        <div class="hero-content scroll-trigger fade-up">
+          <h1 class="hero-title">Agnes Millie</h1>
           <p class="hero-subtitle">
             <span class="typing-effect" data-i18n-words="hero_words"></span>
           </p>
@@ -99,13 +110,13 @@
             >
               <i class="fab fa-github"></i> GitHub
             </a>
-            <a
-              href="#contact"
-              class="btn btn-secondary"
-              data-i18n-key="hero_btn_contact"
-            >
-              <i class="fas fa-envelope"></i> Contato
-            </a>
+          </div>
+        </div>
+        <div class="hero-visual scroll-trigger fade-in">
+          <div class="code-block-decoration">
+            <div class="code-line"></div>
+            <div class="code-line"></div>
+            <div class="code-line"></div>
           </div>
         </div>
       </div>
@@ -114,54 +125,46 @@
     <main>
       <section id="about" class="content-section">
         <div class="container">
-          <h2 class="section-title" data-i18n-key="about_title">Sobre Mim</h2>
+          <h2
+            class="section-title scroll-trigger fade-up"
+            data-i18n-key="about_title"
+          >
+            Sobre Mim
+          </h2>
           <div class="about-grid">
-            <div class="about-narrative">
+            <div class="about-narrative scroll-trigger fade-right">
               <h3 data-i18n-key="about_subtitle1">
                 Arquiteta de Software Full Stack
               </h3>
               <p data-i18n-key="about_p1">
                 Como Arquiteta de Software, minha paixão é transformar conceitos
-                complexos em soluções funcionais e escaláveis. Minha experiência
-                abrange todo o ciclo de vida do desenvolvimento — da concepção e
-                arquitetura à implementação e otimização.
+                complexos em soluções funcionais.
               </p>
               <p data-i18n-key="about_p2">
-                Minha especialidade é desenhar e implementar arquiteturas de
-                software resilientes, com foco em sistemas event-driven e
-                orquestração de microsserviços. Tenho experiência em otimizar
-                bottlenecks de performance em aplicações de alta concorrência,
-                garantindo escalabilidade e um uptime robusto. Minha filosofia
-                foca em código limpo e automação rigorosa de CI/CD.
+                Especialidade em desenhar arquiteturas resilientes e sistemas
+                distribuídos.
               </p>
               <p data-i18n-key="about_p3">
-                Sou uma contribuidora ativa de projetos open-source, focada em
-                ferramentas de observabilidade e segurança de infraestrutura
-                (DevSecOps).
+                Contribuidora ativa de open-source e entusiasta de DevSecOps.
               </p>
             </div>
-            <div class="about-competencies">
+            <div class="about-competencies glass-card scroll-trigger fade-left">
               <h3 data-i18n-key="about_subtitle2">Competências Principais</h3>
               <ul>
                 <li data-i18n-key="about_li1">
-                  <i class="fas fa-sitemap"></i> Arquitetura de Microsserviços e
-                  Sistemas Distribuídos
+                  <i class="fas fa-sitemap"></i> Microsserviços & Distribuídos
                 </li>
                 <li data-i18n-key="about_li2">
-                  <i class="fas fa-cloud"></i> Estratégia Multi-Cloud (AWS, GCP)
-                  e IaC (Terraform)
+                  <i class="fas fa-cloud"></i> Multi-Cloud & IaC
                 </li>
                 <li data-i18n-key="about_li3">
-                  <i class="fas fa-shield-alt"></i> Práticas de DevSecOps e
-                  Arquitetura Zero Trust
+                  <i class="fas fa-shield-alt"></i> DevSecOps & Zero Trust
                 </li>
                 <li data-i18n-key="about_li4">
-                  <i class="fas fa-database"></i> Modelagem de Dados (SQL/NoSQL)
-                  em Larga Escala
+                  <i class="fas fa-database"></i> Big Data Modeling
                 </li>
                 <li data-i18n-key="about_li5">
-                  <i class="fas fa-code"></i> Liderança Técnica e Mentoria de
-                  Times de Engenharia
+                  <i class="fas fa-code"></i> Tech Leadership
                 </li>
               </ul>
             </div>
@@ -169,198 +172,222 @@
         </div>
       </section>
 
-      <section id="philosophy" class="content-section bg-darker">
+      <section id="philosophy" class="content-section bg-alternated">
         <div class="container">
-          <h2 class="section-title" data-i18n-key="philosophy_title">
+          <h2
+            class="section-title scroll-trigger fade-up"
+            data-i18n-key="philosophy_title"
+          >
             Filosofia de Arquitetura
           </h2>
           <div class="philosophy-grid">
-            <div class="philosophy-card">
-              <i class="fas fa-shield-virus"></i>
+            <div
+              class="philosophy-card glass-card scroll-trigger fade-up delay-100"
+            >
+              <div class="card-icon"><i class="fas fa-shield-virus"></i></div>
               <h3 data-i18n-key="philosophy_card1_title">Security by Design</h3>
               <p data-i18n-key="philosophy_card1_desc">
-                A segurança não é um *feature*, mas a fundação. Integro práticas
-                de DevSecOps e arquitetura Zero Trust desde o primeiro *commit*.
+                Segurança como fundação, não feature. DevSecOps desde o D0.
               </p>
             </div>
-            <div class="philosophy-card">
-              <i class="fas fa-brain"></i>
-              <h3 data-i18n-key="philosophy_card2_title">
-                Domain-Driven Design (DDD)
-              </h3>
+            <div
+              class="philosophy-card glass-card scroll-trigger fade-up delay-200"
+            >
+              <div class="card-icon"><i class="fas fa-brain"></i></div>
+              <h3 data-i18n-key="philosophy_card2_title">DDD</h3>
               <p data-i18n-key="philosophy_card2_desc">
-                Construo software que reflete a complexidade do negócio, criando
-                microsserviços coesos e com limites claros (*bounded contexts*).
+                Bounded contexts claros refletindo a complexidade do negócio.
               </p>
             </div>
-            <div class="philosophy-card">
-              <i class="fas fa-tachometer-alt"></i>
-              <h3 data-i18n-key="philosophy_card3_title">
-                Performance e Escalabilidade
-              </h3>
+            <div
+              class="philosophy-card glass-card scroll-trigger fade-up delay-300"
+            >
+              <div class="card-icon"><i class="fas fa-tachometer-alt"></i></div>
+              <h3 data-i18n-key="philosophy_card3_title">Performance</h3>
               <p data-i18n-key="philosophy_card3_desc">
-                Obsessão por performance. Desenho sistemas *event-driven* e
-                assíncronos que lidam com alta concorrência sem degradação.
+                Sistemas assíncronos e event-driven para alta concorrência.
               </p>
             </div>
-            <div class="philosophy-card">
-              <i class="fas fa-check-double"></i>
-              <h3 data-i18n-key="philosophy_card4_title">
-                Testabilidade e Observabilidade
-              </h3>
+            <div
+              class="philosophy-card glass-card scroll-trigger fade-up delay-400"
+            >
+              <div class="card-icon"><i class="fas fa-check-double"></i></div>
+              <h3 data-i18n-key="philosophy_card4_title">Observabilidade</h3>
               <p data-i18n-key="philosophy_card4_desc">
-                Um sistema que não pode ser testado ou observado é um sistema
-                quebrado. Implemento *Test Pyramid* e o pilar de *logs*,
-                métricas e *traces*.
+                Logs estruturados, métricas e tracing distribuído.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="journey" class="content-section">
+      <section id="services" class="content-section">
         <div class="container">
-          <h2 class="section-title" data-i18n-key="journey_title">
-            Trajetória Profissional
+          <h2
+            class="section-title scroll-trigger fade-up"
+            data-i18n-key="services_title"
+          >
+            Soluções de Engenharia
           </h2>
-          <div class="journey-timeline">
-            <div class="journey-item">
-              <div class="journey-dot"></div>
-              <div class="journey-content">
-                <h3 data-i18n-key="journey_item1_title">
-                  Arquiteta de Software Full Stack
-                </h3>
-                <p class="journey-date" data-i18n-key="journey_item1_date">
-                  2022 - Presente
-                </p>
-                <p data-i18n-key="journey_item1_desc">
-                  Liderança técnica no design e implementação de sistemas
-                  distribuídos em larga escala, focando em arquitetura de nuvem
-                  e microsserviços.
-                </p>
-              </div>
+          <div class="philosophy-grid">
+            <div
+              class="philosophy-card glass-card scroll-trigger fade-up delay-100"
+            >
+              <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+              <h3 data-i18n-key="service_card1_title">System Architecture</h3>
+              <p data-i18n-key="service_card1_desc">
+                Design de sistemas distribuídos escaláveis, alta disponibilidade
+                e microservices.
+              </p>
             </div>
-            <div class="journey-item">
-              <div class="journey-dot"></div>
-              <div class="journey-content">
-                <h3 data-i18n-key="journey_item2_title">
-                  Engenheira de Software Especialista (Cloud & DevOps)
-                </h3>
-                <p class="journey-date" data-i18n-key="journey_item2_date">
-                  2019 - 2022
-                </p>
-                <p data-i18n-key="journey_item2_desc">
-                  Foco em Infraestrutura como Código (Terraform, Kubernetes) e
-                  automação de pipelines CI/CD complexas para ambientes
-                  multi-regionais.
-                </p>
-              </div>
+
+            <div
+              class="philosophy-card glass-card scroll-trigger fade-up delay-200"
+            >
+              <div class="card-icon"><i class="fas fa-user-secret"></i></div>
+              <h3 data-i18n-key="service_card2_title">
+                Cybersecurity Consulting
+              </h3>
+              <p data-i18n-key="service_card2_desc">
+                Auditorias de segurança, PenTest, Hardening de servidores e
+                conformidade.
+              </p>
             </div>
-            <div class="journey-item">
-              <div class="journey-dot"></div>
-              <div class="journey-content">
-                <h3 data-i18n-key="journey_item3_title">
-                  Engenheira de Software Sênior
-                </h3>
-                <p class="journey-date" data-i18n-key="journey_item3_date">
-                  2016 - 2019
-                </p>
-                <p data-i18n-key="journey_item3_desc">
-                  Desenvolvimento e otimização de APIs RESTful de alta
-                  performance (Java/Python) e mentoria de desenvolvedores
-                  júnior/pleno.
-                </p>
+
+            <div
+              class="philosophy-card glass-card scroll-trigger fade-up delay-300"
+            >
+              <div class="card-icon">
+                <i class="fas fa-cloud-upload-alt"></i>
               </div>
+              <h3 data-i18n-key="service_card3_title">Cloud & DevOps</h3>
+              <p data-i18n-key="service_card3_desc">
+                Pipelines CI/CD, IaC (Terraform), Kubernetes e migração para
+                nuvem.
+              </p>
+            </div>
+
+            <div
+              class="philosophy-card glass-card scroll-trigger fade-up delay-400"
+            >
+              <div class="card-icon"><i class="fas fa-microchip"></i></div>
+              <h3 data-i18n-key="service_card4_title">AI Integration</h3>
+              <p data-i18n-key="service_card4_desc">
+                Implementação de agentes inteligentes e automação via Machine
+                Learning.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="ecosystem" class="content-section bg-darker">
+      <section id="ecosystem" class="content-section bg-alternated">
         <div class="container">
-          <h2 class="section-title" data-i18n-key="eco_title">
+          <h2
+            class="section-title scroll-trigger fade-up"
+            data-i18n-key="eco_title"
+          >
             Ecossistema Técnico
           </h2>
 
           <div class="ecosystem-grid">
-            <div class="ecosystem-category">
-              <h3 data-i18n-key="eco_cat1">Programming Languages</h3>
+            <div class="ecosystem-category scroll-trigger fade-up">
+              <h3 data-i18n-key="eco_cat1">Languages</h3>
               <div class="tech-icons">
-                <span data-i18n-key="tech_js"
-                  ><i class="devicon-javascript-plain"></i> JavaScript</span
-                >
-                <span data-i18n-key="tech_ts"
-                  ><i class="devicon-typescript-plain"></i> TypeScript</span
-                >
-                <span data-i18n-key="tech_py"
-                  ><i class="devicon-python-plain"></i> Python</span
-                >
-                <span data-i18n-key="tech_java"
-                  ><i class="devicon-java-plain"></i> Java</span
-                >
-                <span data-i18n-key="tech_html"
-                  ><i class="devicon-html5-plain"></i> HTML5</span
-                >
-                <span data-i18n-key="tech_css"
-                  ><i class="devicon-css3-plain"></i> CSS3</span
-                >
+                <div class="tech-item">
+                  <i class="devicon-javascript-plain"></i>
+                  <span data-i18n-key="tech_js">JavaScript</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-typescript-plain"></i>
+                  <span data-i18n-key="tech_ts">TypeScript</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-python-plain"></i>
+                  <span data-i18n-key="tech_py">Python</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-java-plain"></i>
+                  <span data-i18n-key="tech_java">Java</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-html5-plain"></i>
+                  <span data-i18n-key="tech_html">HTML5</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-css3-plain"></i>
+                  <span data-i18n-key="tech_css">CSS3</span>
+                </div>
               </div>
             </div>
 
-            <div class="ecosystem-category">
+            <div class="ecosystem-category scroll-trigger fade-up delay-100">
               <h3 data-i18n-key="eco_cat2">Frontend</h3>
               <div class="tech-icons">
-                <span data-i18n-key="tech_angular"
-                  ><i class="devicon-angularjs-plain"></i> Angular</span
-                >
-                <span data-i18n-key="tech_react"
-                  ><i class="devicon-react-original"></i> React</span
-                >
-                <span data-i18n-key="tech_vue"
-                  ><i class="devicon-vuejs-plain"></i> Vue.js</span
-                >
-                <span data-i18n-key="tech_node"
-                  ><i class="devicon-nodejs-plain"></i> Node.js</span
-                >
+                <div class="tech-item">
+                  <i class="devicon-angularjs-plain"></i>
+                  <span data-i18n-key="tech_angular">Angular</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-react-original"></i>
+                  <span data-i18n-key="tech_react">React</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-vuejs-plain"></i>
+                  <span data-i18n-key="tech_vue">Vue.js</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-nodejs-plain"></i>
+                  <span data-i18n-key="tech_node">Node.js</span>
+                </div>
               </div>
             </div>
 
-            <div class="ecosystem-category">
+            <div class="ecosystem-category scroll-trigger fade-up delay-200">
               <h3 data-i18n-key="eco_cat3">Databases</h3>
               <div class="tech-icons">
-                <span data-i18n-key="tech_mysql"
-                  ><i class="devicon-mysql-plain"></i> MySQL</span
-                >
-                <span data-i18n-key="tech_pg"
-                  ><i class="devicon-postgresql-plain"></i> PostgreSQL</span
-                >
-                <span data-i18n-key="tech_mongo"
-                  ><i class="devicon-mongodb-plain"></i> MongoDB</span
-                >
+                <div class="tech-item">
+                  <i class="devicon-mysql-plain"></i>
+                  <span data-i18n-key="tech_mysql">MySQL</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-postgresql-plain"></i>
+                  <span data-i18n-key="tech_pg">PostgreSQL</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-mongodb-plain"></i>
+                  <span data-i18n-key="tech_mongo">MongoDB</span>
+                </div>
               </div>
             </div>
 
-            <div class="ecosystem-category">
-              <h3 data-i18n-key="eco_cat4">Cloud & DevOps</h3>
+            <div class="ecosystem-category scroll-trigger fade-up delay-300">
+              <h3 data-i18n-key="eco_cat4">Cloud & Ops</h3>
               <div class="tech-icons">
-                <span data-i18n-key="tech_docker"
-                  ><i class="devicon-docker-plain"></i> Docker</span
-                >
-                <span data-i18n-key="tech_kube"
-                  ><i class="devicon-kubernetes-plain"></i> Kubernetes</span
-                >
-                <span data-i18n-key="tech_aws"
-                  ><i class="devicon-amazonwebservices-original"></i> AWS</span
-                >
-                <span data-i18n-key="tech_tf"
-                  ><i class="devicon-terraform-plain"></i> Terraform</span
-                >
-                <span data-i18n-key="tech_gh"
-                  ><i class="devicon-github-original"></i> GH Actions</span
-                >
-                <span data-i18n-key="tech_linux"
-                  ><i class="devicon-linux-plain"></i> Linux</span
-                >
+                <div class="tech-item">
+                  <i class="devicon-docker-plain"></i>
+                  <span data-i18n-key="tech_docker">Docker</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-kubernetes-plain"></i>
+                  <span data-i18n-key="tech_kube">Kubernetes</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-amazonwebservices-original"></i>
+                  <span data-i18n-key="tech_aws">AWS</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-terraform-plain"></i>
+                  <span data-i18n-key="tech_tf">Terraform</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-github-original"></i>
+                  <span data-i18n-key="tech_gh">GH Actions</span>
+                </div>
+                <div class="tech-item">
+                  <i class="devicon-linux-plain"></i>
+                  <span data-i18n-key="tech_linux">Linux</span>
+                </div>
               </div>
             </div>
           </div>
@@ -369,20 +396,21 @@
 
       <section id="projects" class="content-section">
         <div class="container">
-          <h2 class="section-title" data-i18n-key="projects_title">
+          <h2
+            class="section-title scroll-trigger fade-up"
+            data-i18n-key="projects_title"
+          >
             Repositórios Populares
           </h2>
 
           <div class="projects-grid" id="projects-grid">
             <div class="loader-container">
               <div class="loader"></div>
-              <p data-i18n-key="projects_loading">
-                Carregando repositórios do GitHub...
-              </p>
+              <p data-i18n-key="projects_loading">Carregando repositórios...</p>
             </div>
           </div>
 
-          <div class="carousel-controls">
+          <div class="carousel-controls scroll-trigger fade-in">
             <button class="carousel-arrow" id="prev-page" style="display: none">
               <i class="fas fa-chevron-left"></i>
             </button>
@@ -393,29 +421,7 @@
           </div>
 
           <div id="projects-error" class="error-message" style="display: none">
-            <p data-i18n-key="projects_error">
-              Não foi possível carregar os repositórios. Tente novamente mais
-              tarde.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="content-section bg-darker">
-        <div class="container">
-          <h2 class="section-title" data-i18n-key="contact_title">Contato</h2>
-          <p class="contact-description" data-i18n-key="contact_desc">
-            Estou disponível para colaborações, consultoria em arquitetura de
-            software e novos desafios.
-          </p>
-          <div class="contact-methods">
-            <a
-              href="mailto:contato@agnesmillie.com"
-              class="btn btn-primary"
-              data-i18n-key="contact_btn_email"
-            >
-              <i class="fas fa-envelope"></i> Enviar E-mail
-            </a>
+            <p data-i18n-key="projects_error">Erro ao carregar repositórios.</p>
           </div>
         </div>
       </section>
