@@ -4,389 +4,205 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <meta
-      http-equiv="Content-Security-Policy"
+    <meta http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self' https://api.github.com;"
     />
-
-    <title>Agnes Millie | Full Stack Software Architect</title>
-
-    <meta
-      name="description"
-      content="Portfólio de Agnes Millie, Full Stack Software Architect e Especialista em Cibersegurança."
-      data-i18n-key="meta_description"
-    />
+    <title>Agnes Millie | Arquiteta de Software &amp; Desenvolvedora Full Stack</title>
+    <meta name="description" content="Portfólio de Agnes Millie — Arquiteta de Software e Desenvolvedora Full Stack especializada em soluções tecnológicas de alto impacto." data-i18n-key="meta_description" />
     <meta name="author" content="Agnes Millie" />
+    <meta name="keywords" content="Agnes Millie, Arquiteta de Software, Desenvolvedora Full Stack, Portfolio, Transformação Digital" />
+    <meta property="og:title" content="Agnes Millie | Portfolio Profissional" />
+    <meta property="og:description" content="Arquiteta de Software e Desenvolvedora Full Stack" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="theme-dark">
     <div class="bg-texture"></div>
 
-    <nav class="navbar">
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
       <div class="container navbar-container">
         <a href="#hero" class="nav-logo">
-          <span class="logo-symbol">&lt;</span>AgnesMillie<span
-            class="logo-symbol"
-            >/&gt;</span
-          >
+          <span class="logo-symbol">&lt;</span>Agnes Millie<span class="logo-symbol">/&gt;</span>
         </a>
 
-        <ul class="nav-menu">
-          <li><a href="#hero" data-i18n-key="nav_home">Início</a></li>
+        <ul class="nav-menu" id="nav-menu">
           <li><a href="#about" data-i18n-key="nav_about">Sobre</a></li>
-          <li>
-            <a href="#philosophy" data-i18n-key="nav_philosophy">Filosofia</a>
-          </li>
-          <li><a href="#services" data-i18n-key="nav_services">Soluções</a></li>
-          <li>
-            <a href="#ecosystem" data-i18n-key="nav_ecosystem">Ecossistema</a>
-          </li>
-          <li>
-            <a href="#projects" data-i18n-key="nav_repositories"
-              >Repositórios</a
-            >
-          </li>
+          <li><a href="#experience" data-i18n-key="nav_experience">Experiência</a></li>
+          <li><a href="#skills" data-i18n-key="nav_skills">Competências</a></li>
+          <li><a href="#projects" data-i18n-key="nav_projects">Projetos</a></li>
+          <li><a href="#technologies" data-i18n-key="nav_technologies">Tecnologias</a></li>
+          <li><a href="#contact" data-i18n-key="nav_contact">Contato</a></li>
         </ul>
 
         <div class="nav-right-group">
           <div class="lang-switcher">
-            <button id="lang-pt" class="lang-btn active" data-lang="pt-br">
-              PT
-            </button>
+            <button id="lang-pt" class="lang-btn active" data-lang="pt-br">PT</button>
             <button id="lang-en" class="lang-btn" data-lang="en">EN</button>
             <button id="lang-es" class="lang-btn" data-lang="es">ES</button>
           </div>
-
-          <button
-            class="theme-toggle"
-            id="theme-toggle-btn"
-            aria-label="Alternar tema"
-          >
+          <button class="theme-toggle" id="theme-toggle-btn" aria-label="Alternar tema">
             <i class="fas fa-moon icon-moon"></i>
             <i class="fas fa-sun icon-sun"></i>
           </button>
-
-          <div class="nav-toggle" id="nav-toggle-btn">
+          <div class="nav-toggle" id="nav-toggle-btn" aria-label="Menu" role="button" tabindex="0">
             <i class="fas fa-bars"></i>
           </div>
         </div>
       </div>
     </nav>
 
+    <!-- ===== HERO ===== -->
     <header id="hero" class="hero-section">
+      <div class="hero-bg">
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+        <div class="hero-orb orb-3"></div>
+        <div class="hero-grid-overlay"></div>
+      </div>
+
       <div class="container hero-container">
-        <div class="hero-content scroll-trigger fade-up">
-          <h1 class="hero-title">Agnes Millie</h1>
-          <p class="hero-subtitle">
-            <span class="typing-effect" data-i18n-words="hero_words"></span>
+        <div class="hero-content">
+          <div class="hero-badge scroll-trigger fade-up">
+            <span class="badge-pulse"></span>
+            <span data-i18n-key="hero_badge">Disponível para novos projetos</span>
+          </div>
+
+          <p class="hero-greeting scroll-trigger fade-up delay-100" data-i18n-key="hero_greeting">Olá, eu sou</p>
+          <h1 class="hero-name scroll-trigger fade-up delay-200">Agnes Millie</h1>
+
+          <div class="hero-role scroll-trigger fade-up delay-300">
+            <span data-i18n-key="hero_role_prefix">Especialista em&nbsp;</span>
+            <span class="typing-text" id="typing-text"></span><span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-tagline scroll-trigger fade-up delay-400" data-i18n-key="hero_tagline">
+            Transformando desafios complexos em soluções tecnológicas elegantes e escaláveis
           </p>
-          <p class="hero-description" data-i18n-key="hero_description">
-            Building the future of technology with robust and innovative code.
-          </p>
-          <div class="hero-links">
-            <a
-              href="https://github.com/AgnesMillie"
-              target="_blank"
-              class="btn btn-primary"
-              data-i18n-key="hero_btn_github"
-            >
-              <i class="fab fa-github"></i> GitHub
+
+          <div class="hero-ctas scroll-trigger fade-up delay-500">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-code"></i>
+              <span data-i18n-key="hero_cta_projects">Ver Projetos</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i>
+              <span data-i18n-key="hero_cta_contact">Entrar em Contato</span>
+            </a>
+            <a href="https://github.com/AgnesMillie" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+              <i class="fab fa-github"></i>
+              <span data-i18n-key="hero_cta_github">GitHub</span>
             </a>
           </div>
-        </div>
-        <div class="hero-visual scroll-trigger fade-in">
-          <div class="code-block-decoration">
-            <div class="code-line"></div>
-            <div class="code-line"></div>
-            <div class="code-line"></div>
+
+          <div class="hero-stats scroll-trigger fade-up delay-600">
+            <div class="hero-stat">
+              <span class="stat-num">8+</span>
+              <span class="stat-label" data-i18n-key="hero_stat_years">Anos de experiência</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="hero-stat">
+              <span class="stat-num">26+</span>
+              <span class="stat-label" data-i18n-key="hero_stat_projects">Projetos entregues</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="hero-stat">
+              <span class="stat-num">50+</span>
+              <span class="stat-label" data-i18n-key="hero_stat_tech">Tecnologias</span>
+            </div>
           </div>
         </div>
+
+        <div class="hero-visual scroll-trigger fade-in delay-300">
+          <div class="code-card">
+            <div class="code-card-header">
+              <span class="cc-dot cc-red"></span>
+              <span class="cc-dot cc-yellow"></span>
+              <span class="cc-dot cc-green"></span>
+              <span class="cc-filename">portfolio.ts</span>
+            </div>
+            <div class="code-card-body">
+              <pre class="code-content"><code><span class="c-keyword">const</span> <span class="c-var">agnes</span><span class="c-punct">:</span> <span class="c-type">Developer</span> <span class="c-punct">=</span> <span class="c-punct">{</span>
+  <span class="c-key">name</span><span class="c-punct">:</span> <span class="c-str">"Agnes Millie"</span><span class="c-punct">,</span>
+  <span class="c-key">role</span><span class="c-punct">:</span> <span class="c-str">"Software Architect"</span><span class="c-punct">,</span>
+  <span class="c-key">stack</span><span class="c-punct">:</span> <span class="c-punct">[</span>
+    <span class="c-str">"React"</span><span class="c-punct">,</span> <span class="c-str">"Node.js"</span><span class="c-punct">,</span>
+    <span class="c-str">"TypeScript"</span><span class="c-punct">,</span> <span class="c-str">"AWS"</span>
+  <span class="c-punct">],</span>
+  <span class="c-key">passion</span><span class="c-punct">:</span> <span class="c-str">"Innovation"</span><span class="c-punct">,</span>
+  <span class="c-key">available</span><span class="c-punct">:</span> <span class="c-bool">true</span>
+<span class="c-punct">};</span></code></pre>
+            </div>
+          </div>
+
+          <div class="float-badges">
+            <span class="float-badge fb-react"><i class="devicon-react-original"></i> React</span>
+            <span class="float-badge fb-node"><i class="devicon-nodejs-plain"></i> Node.js</span>
+            <span class="float-badge fb-ts"><i class="devicon-typescript-plain"></i> TypeScript</span>
+            <span class="float-badge fb-aws"><i class="devicon-amazonwebservices-plain"></i> AWS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span data-i18n-key="hero_scroll">Role para explorar</span>
+        <i class="fas fa-chevron-down"></i>
       </div>
     </header>
 
     <main>
-      <section id="about" class="content-section">
+      <!-- ===== ABOUT ===== -->
+      <section id="about" class="section">
         <div class="container">
-          <h2
-            class="section-title scroll-trigger fade-up"
-            data-i18n-key="about_title"
-          >
-            Sobre Mim
-          </h2>
+          <div class="section-header scroll-trigger fade-up">
+            <span class="section-label" data-i18n-key="about_label">Quem sou eu</span>
+            <h2 class="section-title" data-i18n-key="about_title">Sobre Mim</h2>
+          </div>
+
           <div class="about-grid">
-            <div class="about-narrative scroll-trigger fade-right">
-              <h3 data-i18n-key="about_subtitle1">
-                Arquiteta de Software Full Stack
-              </h3>
-              <p data-i18n-key="about_p1">
-                Como Arquiteta de Software, minha paixão é transformar conceitos
-                complexos em soluções funcionais.
-              </p>
-              <p data-i18n-key="about_p2">
-                Especialidade em desenhar arquiteturas resilientes e sistemas
-                distribuídos.
-              </p>
-              <p data-i18n-key="about_p3">
-                Contribuidora ativa de open-source e entusiasta de DevSecOps.
-              </p>
-            </div>
-            <div class="about-competencies glass-card scroll-trigger fade-left">
-              <h3 data-i18n-key="about_subtitle2">Competências Principais</h3>
-              <ul>
-                <li data-i18n-key="about_li1">
-                  <i class="fas fa-sitemap"></i> Microsserviços & Distribuídos
-                </li>
-                <li data-i18n-key="about_li2">
-                  <i class="fas fa-cloud"></i> Multi-Cloud & IaC
-                </li>
-                <li data-i18n-key="about_li3">
-                  <i class="fas fa-shield-alt"></i> DevSecOps & Zero Trust
-                </li>
-                <li data-i18n-key="about_li4">
-                  <i class="fas fa-database"></i> Big Data Modeling
-                </li>
-                <li data-i18n-key="about_li5">
-                  <i class="fas fa-code"></i> Tech Leadership
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="philosophy" class="content-section bg-alternated">
-        <div class="container">
-          <h2
-            class="section-title scroll-trigger fade-up"
-            data-i18n-key="philosophy_title"
-          >
-            Filosofia de Arquitetura
-          </h2>
-          <div class="philosophy-grid">
-            <div
-              class="philosophy-card glass-card scroll-trigger fade-up delay-100"
-            >
-              <div class="card-icon"><i class="fas fa-shield-virus"></i></div>
-              <h3 data-i18n-key="philosophy_card1_title">Security by Design</h3>
-              <p data-i18n-key="philosophy_card1_desc">
-                Segurança como fundação, não feature. DevSecOps desde o D0.
-              </p>
-            </div>
-            <div
-              class="philosophy-card glass-card scroll-trigger fade-up delay-200"
-            >
-              <div class="card-icon"><i class="fas fa-brain"></i></div>
-              <h3 data-i18n-key="philosophy_card2_title">DDD</h3>
-              <p data-i18n-key="philosophy_card2_desc">
-                Bounded contexts claros refletindo a complexidade do negócio.
-              </p>
-            </div>
-            <div
-              class="philosophy-card glass-card scroll-trigger fade-up delay-300"
-            >
-              <div class="card-icon"><i class="fas fa-tachometer-alt"></i></div>
-              <h3 data-i18n-key="philosophy_card3_title">Performance</h3>
-              <p data-i18n-key="philosophy_card3_desc">
-                Sistemas assíncronos e event-driven para alta concorrência.
-              </p>
-            </div>
-            <div
-              class="philosophy-card glass-card scroll-trigger fade-up delay-400"
-            >
-              <div class="card-icon"><i class="fas fa-check-double"></i></div>
-              <h3 data-i18n-key="philosophy_card4_title">Observabilidade</h3>
-              <p data-i18n-key="philosophy_card4_desc">
-                Logs estruturados, métricas e tracing distribuído.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="content-section">
-        <div class="container">
-          <h2
-            class="section-title scroll-trigger fade-up"
-            data-i18n-key="services_title"
-          >
-            Soluções de Engenharia
-          </h2>
-          <div class="philosophy-grid">
-            <div
-              class="philosophy-card glass-card scroll-trigger fade-up delay-100"
-            >
-              <div class="card-icon"><i class="fas fa-layer-group"></i></div>
-              <h3 data-i18n-key="service_card1_title">System Architecture</h3>
-              <p data-i18n-key="service_card1_desc">
-                Design de sistemas distribuídos escaláveis, alta disponibilidade
-                e microservices.
-              </p>
-            </div>
-
-            <div
-              class="philosophy-card glass-card scroll-trigger fade-up delay-200"
-            >
-              <div class="card-icon"><i class="fas fa-user-secret"></i></div>
-              <h3 data-i18n-key="service_card2_title">
-                Cybersecurity Consulting
-              </h3>
-              <p data-i18n-key="service_card2_desc">
-                Auditorias de segurança, PenTest, Hardening de servidores e
-                conformidade.
-              </p>
-            </div>
-
-            <div
-              class="philosophy-card glass-card scroll-trigger fade-up delay-300"
-            >
-              <div class="card-icon">
-                <i class="fas fa-cloud-upload-alt"></i>
-              </div>
-              <h3 data-i18n-key="service_card3_title">Cloud & DevOps</h3>
-              <p data-i18n-key="service_card3_desc">
-                Pipelines CI/CD, IaC (Terraform), Kubernetes e migração para
-                nuvem.
-              </p>
-            </div>
-
-            <div
-              class="philosophy-card glass-card scroll-trigger fade-up delay-400"
-            >
-              <div class="card-icon"><i class="fas fa-microchip"></i></div>
-              <h3 data-i18n-key="service_card4_title">AI Integration</h3>
-              <p data-i18n-key="service_card4_desc">
-                Implementação de agentes inteligentes e automação via Machine
-                Learning.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="ecosystem" class="content-section bg-alternated">
-        <div class="container">
-          <h2
-            class="section-title scroll-trigger fade-up"
-            data-i18n-key="eco_title"
-          >
-            Ecossistema Técnico
-          </h2>
-
-          <div class="ecosystem-grid">
-            <div class="ecosystem-category scroll-trigger fade-up">
-              <h3 data-i18n-key="eco_cat1">Languages</h3>
-              <div class="tech-icons">
-                <div class="tech-item">
-                  <i class="devicon-javascript-plain"></i>
-                  <span data-i18n-key="tech_js">JavaScript</span>
+            <div class="about-avatar-col scroll-trigger fade-right">
+              <div class="avatar-wrapper">
+                <div class="avatar-ring">
+                  <div class="avatar-inner">
+                    <span class="avatar-initials">AM</span>
+                  </div>
                 </div>
-                <div class="tech-item">
-                  <i class="devicon-typescript-plain"></i>
-                  <span data-i18n-key="tech_ts">TypeScript</span>
-                </div>
-                <div class="tech-item">
-                  <i class="devicon-python-plain"></i>
-                  <span data-i18n-key="tech_py">Python</span>
-                </div>
-                <div class="tech-item">
-                  <i class="devicon-java-plain"></i>
-                  <span data-i18n-key="tech_java">Java</span>
-                </div>
-                <div class="tech-item">
-                  <i class="devicon-html5-plain"></i>
-                  <span data-i18n-key="tech_html">HTML5</span>
-                </div>
-                <div class="tech-item">
-                  <i class="devicon-css3-plain"></i>
-                  <span data-i18n-key="tech_css">CSS3</span>
+                <div class="avatar-status">
+                  <span class="status-dot"></span>
+                  <span data-i18n-key="about_status">Aberta a oportunidades</span>
                 </div>
               </div>
             </div>
 
-            <div class="ecosystem-category scroll-trigger fade-up delay-100">
-              <h3 data-i18n-key="eco_cat2">Frontend</h3>
-              <div class="tech-icons">
-                <div class="tech-item">
-                  <i class="devicon-angularjs-plain"></i>
-                  <span data-i18n-key="tech_angular">Angular</span>
-                </div>
-                <div class="tech-item">
-                  <i class="devicon-react-original"></i>
-                  <span data-i18n-key="tech_react">React</span>
-                </div>
-                <div class="tech-item">
-                  <i class="devicon-vuejs-plain"></i>
-                  <span data-i18n-key="tech_vue">Vue.js</span>
-                </div>
-                <div class="tech-item">
-                  <i class="devicon-nodejs-plain"></i>
-                  <span data-i18n-key="tech_node">Node.js</span>
-                </div>
-              </div>
-            </div>
+            <div class="about-content scroll-trigger fade-left">
+              <h3 data-i18n-key="about_subtitle">Arquiteta de Software &amp; Desenvolvedora Full Stack</h3>
+              <p data-i18n-key="about_p1">Agnes Millie é uma Arquiteta de Software e Desenvolvedora Full Stack com mais de 8 anos de experiência criando soluções tecnológicas de alto impacto. Especializada em transformação digital, automação de processos e desenvolvimento de sistemas empresariais complexos.</p>
+              <p data-i18n-key="about_p2">Ao longo da carreira, liderou o desenvolvimento de plataformas corporativas, sistemas de gestão, soluções de assinatura eletrônica e dashboards executivos para empresas de diferentes segmentos, combinando expertise técnica profunda com visão estratégica de negócios.</p>
+              <p data-i18n-key="about_p3">Apaixonada por inovação e comprometida com excelência, busca constantemente aplicar as melhores práticas de arquitetura limpa, segurança da informação e experiência do usuário em cada projeto entregue.</p>
 
-            <div class="ecosystem-category scroll-trigger fade-up delay-200">
-              <h3 data-i18n-key="eco_cat3">Databases</h3>
-              <div class="tech-icons">
-                <div class="tech-item">
-                  <i class="devicon-mysql-plain"></i>
-                  <span data-i18n-key="tech_mysql">MySQL</span>
+              <div class="about-values">
+                <div class="value-item">
+                  <i class="fas fa-lightbulb"></i>
+                  <span data-i18n-key="about_v1">Inovação</span>
                 </div>
-                <div class="tech-item">
-                  <i class="devicon-postgresql-plain"></i>
-                  <span data-i18n-key="tech_pg">PostgreSQL</span>
+                <div class="value-item">
+                  <i class="fas fa-shield-alt"></i>
+                  <span data-i18n-key="about_v2">Segurança</span>
                 </div>
-                <div class="tech-item">
-                  <i class="devicon-mongodb-plain"></i>
-                  <span data-i18n-key="tech_mongo">MongoDB</span>
+                <div class="value-item">
+                  <i class="fas fa-star"></i>
+                  <span data-i18n-key="about_v3">Excelência</span>
                 </div>
-              </div>
-            </div>
-
-            <div class="ecosystem-category scroll-trigger fade-up delay-300">
-              <h3 data-i18n-key="eco_cat4">Cloud & Ops</h3>
-              <div class="tech-icons">
-                <div class="tech-item">
-                  <i class="devicon-docker-plain"></i>
-                  <span data-i18n-key="tech_docker">Docker</span>
-                </div>
-                <div class="tech-item">
-                  <i class="devicon-kubernetes-plain"></i>
-                  <span data-i18n-key="tech_kube">Kubernetes</span>
-                </div>
-                <div class="tech-item">
-                  <i class="devicon-amazonwebservices-original"></i>
-                  <span data-i18n-key="tech_aws">AWS</span>
-                </div>
-                <div class="tech-item">
-                  <i class="devicon-terraform-plain"></i>
-                  <span data-i18n-key="tech_tf">Terraform</span>
-                </div>
-                <div class="tech-item">
-                  <i class="devicon-github-original"></i>
-                  <span data-i18n-key="tech_gh">GH Actions</span>
-                </div>
-                <div class="tech-item">
-                  <i class="devicon-linux-plain"></i>
-                  <span data-i18n-key="tech_linux">Linux</span>
+                <div class="value-item">
+                  <i class="fas fa-users"></i>
+                  <span data-i18n-key="about_v4">Colaboração</span>
                 </div>
               </div>
             </div>
@@ -394,44 +210,926 @@
         </div>
       </section>
 
-      <section id="projects" class="content-section">
+      <!-- ===== EXPERIENCE ===== -->
+      <section id="experience" class="section bg-alt">
         <div class="container">
-          <h2
-            class="section-title scroll-trigger fade-up"
-            data-i18n-key="projects_title"
-          >
-            Repositórios Populares
-          </h2>
+          <div class="section-header scroll-trigger fade-up">
+            <span class="section-label" data-i18n-key="exp_label">Trajetória</span>
+            <h2 class="section-title" data-i18n-key="exp_title">Experiência Profissional</h2>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item scroll-trigger fade-up">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div>
+                    <span class="timeline-period" data-i18n-key="exp1_period">2022 — Presente</span>
+                    <h3 class="timeline-role" data-i18n-key="exp1_role">Arquiteta de Software Sênior</h3>
+                    <span class="timeline-company" data-i18n-key="exp1_company">Tecnologia &amp; Inovação Digital</span>
+                  </div>
+                  <span class="timeline-badge current" data-i18n-key="exp_current">Atual</span>
+                </div>
+                <p data-i18n-key="exp1_desc">Liderança técnica em projetos de transformação digital, design de arquiteturas de microsserviços e desenvolvimento de plataformas SaaS empresariais. Responsável pela implementação de soluções baseadas em IA e automação de processos complexos.</p>
+                <ul class="timeline-achievements">
+                  <li data-i18n-key="exp1_a1"><i class="fas fa-check"></i> Arquitetura e liderança de 12+ projetos corporativos de alto impacto</li>
+                  <li data-i18n-key="exp1_a2"><i class="fas fa-check"></i> Implementação de plataformas SaaS utilizadas por 10.000+ usuários</li>
+                  <li data-i18n-key="exp1_a3"><i class="fas fa-check"></i> Redução de 70% em processos manuais via automação inteligente</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">AWS</span><span class="tag">Microservices</span><span class="tag">TypeScript</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item scroll-trigger fade-up delay-100">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div>
+                    <span class="timeline-period" data-i18n-key="exp2_period">2019 — 2022</span>
+                    <h3 class="timeline-role" data-i18n-key="exp2_role">Desenvolvedora Full Stack</h3>
+                    <span class="timeline-company" data-i18n-key="exp2_company">Software House &amp; Consultoria</span>
+                  </div>
+                </div>
+                <p data-i18n-key="exp2_desc">Desenvolvimento de sistemas corporativos complexos, plataformas de e-commerce e gestão documental. Integração com APIs externas, serviços em nuvem e implementação de soluções de BI e dashboards executivos.</p>
+                <ul class="timeline-achievements">
+                  <li data-i18n-key="exp2_a1"><i class="fas fa-check"></i> Entrega de 10+ sistemas corporativos em diferentes segmentos</li>
+                  <li data-i18n-key="exp2_a2"><i class="fas fa-check"></i> Desenvolvimento de plataformas de e-commerce com +150% conversão</li>
+                  <li data-i18n-key="exp2_a3"><i class="fas fa-check"></i> 30+ integrações com APIs e serviços externos implementadas</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag">Vue.js</span><span class="tag">Angular</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item scroll-trigger fade-up delay-200">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div>
+                    <span class="timeline-period" data-i18n-key="exp3_period">2016 — 2019</span>
+                    <h3 class="timeline-role" data-i18n-key="exp3_role">Desenvolvedora de Software</h3>
+                    <span class="timeline-company" data-i18n-key="exp3_company">Empresa de Tecnologia</span>
+                  </div>
+                </div>
+                <p data-i18n-key="exp3_desc">Desenvolvimento web, aplicações corporativas e sistemas de controle. Modelagem de bancos de dados, automação de processos e participação ativa em projetos de transformação digital em empresas de múltiplos segmentos.</p>
+                <ul class="timeline-achievements">
+                  <li data-i18n-key="exp3_a1"><i class="fas fa-check"></i> Desenvolvimento e manutenção de 8+ aplicações web</li>
+                  <li data-i18n-key="exp3_a2"><i class="fas fa-check"></i> Modelagem e otimização de bancos de dados relacionais</li>
+                  <li data-i18n-key="exp3_a3"><i class="fas fa-check"></i> Participação em projetos de transformação digital</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">MySQL</span><span class="tag">PHP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SKILLS ===== -->
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-header scroll-trigger fade-up">
+            <span class="section-label" data-i18n-key="skills_label">Expertise</span>
+            <h2 class="section-title" data-i18n-key="skills_title">Competências Técnicas</h2>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card glass-card scroll-trigger fade-up">
+              <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+              <h3 data-i18n-key="sk1_title">Frontend Development</h3>
+              <div class="skill-tags">
+                <span class="stag">HTML5</span><span class="stag">CSS3</span><span class="stag">JavaScript</span>
+                <span class="stag">TypeScript</span><span class="stag">React</span><span class="stag">Angular</span>
+                <span class="stag">Vue.js</span><span class="stag">UX/UI Design</span>
+              </div>
+            </div>
+
+            <div class="skill-card glass-card scroll-trigger fade-up delay-100">
+              <div class="skill-icon"><i class="fas fa-server"></i></div>
+              <h3 data-i18n-key="sk2_title">Backend Development</h3>
+              <div class="skill-tags">
+                <span class="stag">Node.js</span><span class="stag">Python</span><span class="stag">Java</span>
+                <span class="stag">REST APIs</span><span class="stag">GraphQL</span><span class="stag">Microservices</span>
+                <span class="stag">Design Patterns</span>
+              </div>
+            </div>
+
+            <div class="skill-card glass-card scroll-trigger fade-up delay-200">
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <h3 data-i18n-key="sk3_title">Banco de Dados</h3>
+              <div class="skill-tags">
+                <span class="stag">MySQL</span><span class="stag">PostgreSQL</span><span class="stag">MongoDB</span>
+                <span class="stag">SQL Server</span><span class="stag">Redis</span><span class="stag">Modelagem de Dados</span>
+              </div>
+            </div>
+
+            <div class="skill-card glass-card scroll-trigger fade-up delay-300">
+              <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+              <h3 data-i18n-key="sk4_title">Cloud &amp; DevOps</h3>
+              <div class="skill-tags">
+                <span class="stag">AWS</span><span class="stag">Docker</span><span class="stag">Kubernetes</span>
+                <span class="stag">CI/CD</span><span class="stag">Git/GitHub</span><span class="stag">Linux</span>
+                <span class="stag">Terraform</span>
+              </div>
+            </div>
+
+            <div class="skill-card glass-card scroll-trigger fade-up">
+              <div class="skill-icon"><i class="fas fa-sitemap"></i></div>
+              <h3 data-i18n-key="sk5_title">Arquitetura de Software</h3>
+              <div class="skill-tags">
+                <span class="stag">DDD</span><span class="stag">SOLID</span><span class="stag">Clean Architecture</span>
+                <span class="stag">Event-Driven</span><span class="stag">CQRS</span><span class="stag">Escalabilidade</span>
+              </div>
+            </div>
+
+            <div class="skill-card glass-card scroll-trigger fade-up delay-100">
+              <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+              <h3 data-i18n-key="sk6_title">Segurança da Informação</h3>
+              <div class="skill-tags">
+                <span class="stag">Security by Design</span><span class="stag">OAuth/JWT</span>
+                <span class="stag">Criptografia</span><span class="stag">LGPD/GDPR</span>
+                <span class="stag">Auditoria</span><span class="stag">Zero Trust</span>
+              </div>
+            </div>
+
+            <div class="skill-card glass-card scroll-trigger fade-up delay-200">
+              <div class="skill-icon"><i class="fas fa-brain"></i></div>
+              <h3 data-i18n-key="sk7_title">IA &amp; Automação</h3>
+              <div class="skill-tags">
+                <span class="stag">Machine Learning</span><span class="stag">LLMs</span>
+                <span class="stag">Automação de Processos</span><span class="stag">RPA</span>
+                <span class="stag">Análise de Dados</span><span class="stag">Business Intelligence</span>
+              </div>
+            </div>
+
+            <div class="skill-card glass-card scroll-trigger fade-up delay-300">
+              <div class="skill-icon"><i class="fas fa-tasks"></i></div>
+              <h3 data-i18n-key="sk8_title">Gestão &amp; Metodologia</h3>
+              <div class="skill-tags">
+                <span class="stag">Scrum</span><span class="stag">Kanban</span><span class="stag">Tech Leadership</span>
+                <span class="stag">Code Review</span><span class="stag">TDD</span><span class="stag">Agile</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section id="projects" class="section bg-alt">
+        <div class="container">
+          <div class="section-header scroll-trigger fade-up">
+            <span class="section-label" data-i18n-key="proj_label">Portfolio</span>
+            <h2 class="section-title" data-i18n-key="proj_title">Projetos em Destaque</h2>
+            <p class="section-subtitle" data-i18n-key="proj_subtitle">Soluções desenvolvidas que geraram impacto real em organizações de diferentes segmentos</p>
+          </div>
+
+          <div class="project-filters scroll-trigger fade-up" id="project-filters">
+            <button class="pf-btn active" data-filter="all" data-i18n-key="pf_all">Todos</button>
+            <button class="pf-btn" data-filter="digital-docs" data-i18n-key="pf_docs">Documentos Digitais</button>
+            <button class="pf-btn" data-filter="web" data-i18n-key="pf_web">Web &amp; E-commerce</button>
+            <button class="pf-btn" data-filter="enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</button>
+            <button class="pf-btn" data-filter="analytics" data-i18n-key="pf_analytics">Analytics &amp; BI</button>
+            <button class="pf-btn" data-filter="security" data-i18n-key="pf_security">Segurança</button>
+            <button class="pf-btn" data-filter="ai" data-i18n-key="pf_ai">IA &amp; Automação</button>
+          </div>
 
           <div class="projects-grid" id="projects-grid">
-            <div class="loader-container">
-              <div class="loader"></div>
-              <p data-i18n-key="projects_loading">Carregando repositórios...</p>
+
+            <!-- Digital Docs -->
+            <div class="proj-card glass-card" data-category="digital-docs">
+              <div class="proj-top">
+                <span class="proj-cat cat-docs" data-i18n-key="pf_docs">Documentos Digitais</span>
+                <i class="fas fa-file-signature proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p1_title">Plataforma de Assinatura Eletrônica — Gestão Documental</h3>
+              <p data-i18n-key="p1_desc">Sistema completo de gestão e assinatura eletrônica de documentos corporativos com validação jurídica, auditoria de acessos e armazenamento seguro em nuvem.</p>
+              <div class="proj-tech">
+                <span class="ptag">Node.js</span><span class="ptag">React</span><span class="ptag">PostgreSQL</span><span class="ptag">AWS S3</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p1_metric">90% redução no tempo de processamento</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="digital-docs">
+              <div class="proj-top">
+                <span class="proj-cat cat-docs" data-i18n-key="pf_docs">Documentos Digitais</span>
+                <i class="fas fa-user-check proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p2_title">Assinatura Eletrônica para Recursos Humanos</h3>
+              <p data-i18n-key="p2_desc">Plataforma especializada para assinatura digital de contratos de trabalho, termos de responsabilidade e documentos de RH com conformidade legal e rastreabilidade completa.</p>
+              <div class="proj-tech">
+                <span class="ptag">TypeScript</span><span class="ptag">Vue.js</span><span class="ptag">MySQL</span><span class="ptag">JWT</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p2_metric">100% digitalização dos processos de RH</span>
+              </div>
+            </div>
+
+            <!-- Web & E-commerce -->
+            <div class="proj-card glass-card" data-category="web">
+              <div class="proj-top">
+                <span class="proj-cat cat-web" data-i18n-key="pf_web">Web &amp; E-commerce</span>
+                <i class="fas fa-globe proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p3_title">Websites Corporativos de Alta Performance</h3>
+              <p data-i18n-key="p3_desc">Desenvolvimento de websites corporativos responsivos com foco em performance, SEO técnico avançado e experiência do usuário, atingindo pontuações máximas no Core Web Vitals.</p>
+              <div class="proj-tech">
+                <span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">JavaScript</span><span class="ptag">SEO</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p3_metric">Score 98/100 PageSpeed Insights</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="web">
+              <div class="proj-top">
+                <span class="proj-cat cat-web" data-i18n-key="pf_web">Web &amp; E-commerce</span>
+                <i class="fas fa-shopping-cart proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p4_title">Plataformas de E-commerce</h3>
+              <p data-i18n-key="p4_desc">Desenvolvimento de lojas virtuais completas com gateway de pagamento integrado, gestão de estoque em tempo real, painel administrativo e análises de performance de vendas.</p>
+              <div class="proj-tech">
+                <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">MongoDB</span><span class="ptag">Stripe</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p4_metric">+150% aumento na taxa de conversão</span>
+              </div>
+            </div>
+
+            <!-- Enterprise Systems -->
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-cogs proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p5_title">Sistemas de Automação de Processos Empresariais</h3>
+              <p data-i18n-key="p5_desc">Implementação de workflows automatizados para otimização de processos operacionais, eliminação de retrabalho e integração entre departamentos corporativos.</p>
+              <div class="proj-tech">
+                <span class="ptag">Node.js</span><span class="ptag">Python</span><span class="ptag">SQL</span><span class="ptag">RPA</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p5_metric">70% redução em processos manuais</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-clock proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p6_title">Sistema de Ponto Eletrônico</h3>
+              <p data-i18n-key="p6_desc">Controle de jornada de trabalho com suporte a biometria, geolocalização, banco de horas e relatórios gerenciais integrados ao sistema de folha de pagamento.</p>
+              <div class="proj-tech">
+                <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">PostgreSQL</span><span class="ptag">GPS API</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p6_metric">500+ colaboradores gerenciados</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-umbrella-beach proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p7_title">Sistema de Gestão de Férias</h3>
+              <p data-i18n-key="p7_desc">Plataforma de solicitação e controle de férias com fluxo de aprovação multinível, integração com calendário corporativo e relatórios de conformidade trabalhista.</p>
+              <div class="proj-tech">
+                <span class="ptag">Vue.js</span><span class="ptag">Node.js</span><span class="ptag">MySQL</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p7_metric">Eliminou 100% dos controles manuais</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="digital-docs">
+              <div class="proj-top">
+                <span class="proj-cat cat-docs" data-i18n-key="pf_docs">Documentos Digitais</span>
+                <i class="fas fa-book proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p8_title">Biblioteca Digital Corporativa</h3>
+              <p data-i18n-key="p8_desc">Sistema de gerenciamento e compartilhamento de documentos corporativos com controle de versão, permissões granulares e busca full-text avançada.</p>
+              <div class="proj-tech">
+                <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">MongoDB</span><span class="ptag">ElasticSearch</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p8_metric">10.000+ documentos gerenciados</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="digital-docs">
+              <div class="proj-top">
+                <span class="proj-cat cat-docs" data-i18n-key="pf_docs">Documentos Digitais</span>
+                <i class="fas fa-folder-open proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p9_title">Plataforma de Gestão de Contratos Digitais</h3>
+              <p data-i18n-key="p9_desc">Ciclo de vida completo de contratos: criação, negociação, assinatura, armazenamento e renovação automática com alertas de vencimento e relatórios de compliance.</p>
+              <div class="proj-tech">
+                <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">SQL Server</span><span class="ptag">PDF.js</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p9_metric">200+ contratos gerenciados/mês</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-dollar-sign proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p10_title">Sistema de Gestão Financeira</h3>
+              <p data-i18n-key="p10_desc">Controle completo de receitas, despesas, fluxo de caixa, DRE automatizado e geração de relatórios financeiros executivos com exportação em múltiplos formatos.</p>
+              <div class="proj-tech">
+                <span class="ptag">React</span><span class="ptag">Python</span><span class="ptag">PostgreSQL</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p10_metric">40% redução em erros contábeis</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-project-diagram proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p11_title">Plataforma de Gestão de Projetos e Equipes</h3>
+              <p data-i18n-key="p11_desc">Sistema de gerenciamento de projetos com kanban interativo, cronogramas Gantt, alocação de recursos, chat integrado e dashboards de progresso por equipe.</p>
+              <div class="proj-tech">
+                <span class="ptag">Vue.js</span><span class="ptag">Node.js</span><span class="ptag">MongoDB</span><span class="ptag">WebSocket</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p11_metric">Utilizado por 50+ equipes simultâneas</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-boxes proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p12_title">Sistema de Controle de Estoque e Logística</h3>
+              <p data-i18n-key="p12_desc">Gestão completa de inventário, entradas e saídas, rastreamento de pedidos, código de barras, alertas de ruptura de estoque e relatórios logísticos.</p>
+              <div class="proj-tech">
+                <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">MySQL</span><span class="ptag">Barcode API</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p12_metric">99.8% de precisão no inventário</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-headset proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p13_title">Sistema de Atendimento e Abertura de Chamados</h3>
+              <p data-i18n-key="p13_desc">Plataforma de help desk corporativo com SLA automatizado, categorização inteligente, base de conhecimento, escalação automática e relatórios de desempenho.</p>
+              <div class="proj-tech">
+                <span class="ptag">Angular</span><span class="ptag">Node.js</span><span class="ptag">PostgreSQL</span><span class="ptag">Email API</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p13_metric">60% redução no tempo de resolução</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-building proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p14_title">Portal Corporativo para Colaboradores</h3>
+              <p data-i18n-key="p14_desc">Intranet corporativa com comunicados, benefícios, holerites digitais, solicitações de RH, galeria de colaboradores e ferramentas de comunicação interna.</p>
+              <div class="proj-tech">
+                <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">MongoDB</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p14_metric">1.000+ usuários ativos mensalmente</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-graduation-cap proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p15_title">Plataforma de Onboarding e Treinamento Corporativo</h3>
+              <p data-i18n-key="p15_desc">LMS corporativo com trilhas de aprendizado personalizadas, videoaulas, quizzes, certificados automáticos e relatórios de engajamento por colaborador.</p>
+              <div class="proj-tech">
+                <span class="ptag">Vue.js</span><span class="ptag">Python</span><span class="ptag">PostgreSQL</span><span class="ptag">FFmpeg</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p15_metric">80% redução no tempo de onboarding</span>
+              </div>
+            </div>
+
+            <!-- Analytics -->
+            <div class="proj-card glass-card" data-category="analytics">
+              <div class="proj-top">
+                <span class="proj-cat cat-analytics" data-i18n-key="pf_analytics">Analytics &amp; BI</span>
+                <i class="fas fa-tachometer-alt proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p16_title">Dashboard Executivo — Monitoramento de Indicadores</h3>
+              <p data-i18n-key="p16_desc">Painel gerencial em tempo real com KPIs estratégicos, métricas de negócio, gráficos dinâmicos e alertas automatizados via e-mail e SMS para gestores.</p>
+              <div class="proj-tech">
+                <span class="ptag">React</span><span class="ptag">Python</span><span class="ptag">PostgreSQL</span><span class="ptag">Chart.js</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p16_metric">Visibilidade 360° em tempo real</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="analytics">
+              <div class="proj-top">
+                <span class="proj-cat cat-analytics" data-i18n-key="pf_analytics">Analytics &amp; BI</span>
+                <i class="fas fa-chart-bar proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p17_title">Plataforma de Business Intelligence (BI)</h3>
+              <p data-i18n-key="p17_desc">Solução de análise de dados com pipeline ETL automatizado, relatórios customizáveis, visualizações interativas e insights preditivos para suporte à decisão estratégica.</p>
+              <div class="proj-tech">
+                <span class="ptag">Python</span><span class="ptag">React</span><span class="ptag">PostgreSQL</span><span class="ptag">Apache Spark</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p17_metric">Processamento de 1M+ registros/dia</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="analytics">
+              <div class="proj-top">
+                <span class="proj-cat cat-analytics" data-i18n-key="pf_analytics">Analytics &amp; BI</span>
+                <i class="fas fa-satellite-dish proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p18_title">Plataforma de Monitoramento Operacional em Tempo Real</h3>
+              <p data-i18n-key="p18_desc">Sistema de monitoramento contínuo de operações com detecção de anomalias via IA, dashboards operacionais e alertas em tempo real para equipes de NOC.</p>
+              <div class="proj-tech">
+                <span class="ptag">Node.js</span><span class="ptag">React</span><span class="ptag">MongoDB</span><span class="ptag">WebSocket</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p18_metric">99.9% de disponibilidade monitorada</span>
+              </div>
+            </div>
+
+            <!-- Security -->
+            <div class="proj-card glass-card" data-category="security">
+              <div class="proj-top">
+                <span class="proj-cat cat-security" data-i18n-key="pf_security">Segurança</span>
+                <i class="fas fa-lock proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p19_title">Sistema de Autenticação e Controle de Acesso</h3>
+              <p data-i18n-key="p19_desc">Plataforma IAM corporativa com SSO, MFA, RBAC granular, auditoria completa de acessos, detecção de anomalias e conformidade com LGPD e ISO 27001.</p>
+              <div class="proj-tech">
+                <span class="ptag">Node.js</span><span class="ptag">React</span><span class="ptag">PostgreSQL</span><span class="ptag">OAuth2</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p19_metric">Zero brechas de segurança em 2 anos</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="security">
+              <div class="proj-top">
+                <span class="proj-cat cat-security" data-i18n-key="pf_security">Segurança</span>
+                <i class="fas fa-plug proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p20_title">Integrações com APIs Externas e Serviços em Nuvem</h3>
+              <p data-i18n-key="p20_desc">Desenvolvimento de conectores seguros com ERPs, sistemas bancários, gateways de pagamento, APIs governamentais e serviços de terceiros com alta resiliência.</p>
+              <div class="proj-tech">
+                <span class="ptag">Node.js</span><span class="ptag">Python</span><span class="ptag">REST/GraphQL</span><span class="ptag">OAuth2</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p20_metric">30+ integrações implementadas com sucesso</span>
+              </div>
+            </div>
+
+            <!-- AI & Automation -->
+            <div class="proj-card glass-card" data-category="ai">
+              <div class="proj-top">
+                <span class="proj-cat cat-ai" data-i18n-key="pf_ai">IA &amp; Automação</span>
+                <i class="fas fa-robot proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p21_title">Soluções de Inteligência Artificial para Automação</h3>
+              <p data-i18n-key="p21_desc">Implementação de modelos de IA para classificação automática de documentos, extração de informações, suporte à decisão e automação de processos cognitivos.</p>
+              <div class="proj-tech">
+                <span class="ptag">Python</span><span class="ptag">TensorFlow</span><span class="ptag">Node.js</span><span class="ptag">OpenAI API</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p21_metric">85% de assertividade nos modelos</span>
+              </div>
+            </div>
+
+            <!-- More Enterprise -->
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-handshake proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p22_title">CRM — Gerenciamento de Clientes e Oportunidades</h3>
+              <p data-i18n-key="p22_desc">Sistema de relacionamento com clientes com funil de vendas visual, automação de follow-up, acompanhamento de oportunidades e relatórios comerciais detalhados.</p>
+              <div class="proj-tech">
+                <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">PostgreSQL</span><span class="ptag">Email API</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p22_metric">35% aumento nas conversões de vendas</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-industry proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p23_title">ERP — Integração de Processos Empresariais</h3>
+              <p data-i18n-key="p23_desc">Sistema integrado de gestão empresarial unificando financeiro, RH, estoque, compras e operações em uma única plataforma com painéis executivos consolidados.</p>
+              <div class="proj-tech">
+                <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">SQL Server</span><span class="ptag">Docker</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p23_metric">5 módulos corporativos integrados</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-calendar-check proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p24_title">Sistema de Agendamento e Gerenciamento de Atendimentos</h3>
+              <p data-i18n-key="p24_desc">Plataforma de agendamentos online com confirmações automáticas via WhatsApp/e-mail, gestão de filas, prontuário digital e relatórios de ocupação por período.</p>
+              <div class="proj-tech">
+                <span class="ptag">Vue.js</span><span class="ptag">Node.js</span><span class="ptag">MySQL</span><span class="ptag">WhatsApp API</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p24_metric">300+ atendimentos/dia gerenciados</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="enterprise">
+              <div class="proj-top">
+                <span class="proj-cat cat-enterprise" data-i18n-key="pf_enterprise">Sistemas Empresariais</span>
+                <i class="fas fa-puzzle-piece proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p25_title">Sistemas de Gestão Personalizados</h3>
+              <p data-i18n-key="p25_desc">Desenvolvimento de sistemas sob medida para empresas de diferentes segmentos, atendendo necessidades específicas de negócio com arquitetura escalável e moderna.</p>
+              <div class="proj-tech">
+                <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">Multiple DBs</span><span class="ptag">AWS</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p25_metric">15+ empresas de diferentes segmentos</span>
+              </div>
+            </div>
+
+            <div class="proj-card glass-card" data-category="ai">
+              <div class="proj-top">
+                <span class="proj-cat cat-ai" data-i18n-key="pf_ai">IA &amp; Automação</span>
+                <i class="fas fa-microchip proj-icon"></i>
+              </div>
+              <h3 data-i18n-key="p26_title">Plataforma de Gerenciamento Documental com IA</h3>
+              <p data-i18n-key="p26_desc">Sistema inteligente de gerenciamento documental com classificação automática via IA, OCR, extração de metadados e sugestões de categorização baseadas em ML.</p>
+              <div class="proj-tech">
+                <span class="ptag">Python</span><span class="ptag">React</span><span class="ptag">PostgreSQL</span><span class="ptag">Tesseract OCR</span>
+              </div>
+              <div class="proj-metric">
+                <i class="fas fa-chart-line"></i>
+                <span data-i18n-key="p26_metric">85% redução no tempo de indexação</span>
+              </div>
+            </div>
+
+          </div><!-- /projects-grid -->
+        </div>
+      </section>
+
+      <!-- ===== TECHNOLOGIES ===== -->
+      <section id="technologies" class="section">
+        <div class="container">
+          <div class="section-header scroll-trigger fade-up">
+            <span class="section-label" data-i18n-key="tech_label">Stack</span>
+            <h2 class="section-title" data-i18n-key="tech_title">Tecnologias &amp; Ferramentas</h2>
+          </div>
+
+          <div class="tech-categories">
+            <div class="tech-cat scroll-trigger fade-up">
+              <h4 data-i18n-key="tech_cat1">Linguagens</h4>
+              <div class="tech-items">
+                <div class="tech-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                <div class="tech-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                <div class="tech-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                <div class="tech-item"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+                <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                <div class="tech-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+              </div>
+            </div>
+
+            <div class="tech-cat scroll-trigger fade-up delay-100">
+              <h4 data-i18n-key="tech_cat2">Frontend</h4>
+              <div class="tech-items">
+                <div class="tech-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+                <div class="tech-item"><i class="devicon-angularjs-plain colored"></i><span>Angular</span></div>
+                <div class="tech-item"><i class="devicon-vuejs-plain colored"></i><span>Vue.js</span></div>
+                <div class="tech-item"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+              </div>
+            </div>
+
+            <div class="tech-cat scroll-trigger fade-up delay-200">
+              <h4 data-i18n-key="tech_cat3">Bancos de Dados</h4>
+              <div class="tech-items">
+                <div class="tech-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                <div class="tech-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                <div class="tech-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+              </div>
+            </div>
+
+            <div class="tech-cat scroll-trigger fade-up delay-300">
+              <h4 data-i18n-key="tech_cat4">Cloud &amp; DevOps</h4>
+              <div class="tech-items">
+                <div class="tech-item"><i class="devicon-amazonwebservices-plain colored"></i><span>AWS</span></div>
+                <div class="tech-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+                <div class="tech-item"><i class="devicon-kubernetes-plain colored"></i><span>Kubernetes</span></div>
+                <div class="tech-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                <div class="tech-item"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+                <div class="tech-item"><i class="devicon-linux-plain colored"></i><span>Linux</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CERTIFICATIONS ===== -->
+      <section id="certifications" class="section bg-alt">
+        <div class="container">
+          <div class="section-header scroll-trigger fade-up">
+            <span class="section-label" data-i18n-key="cert_label">Formação</span>
+            <h2 class="section-title" data-i18n-key="cert_title">Certificações &amp; Formação</h2>
+          </div>
+
+          <div class="cert-grid">
+            <div class="cert-card glass-card scroll-trigger fade-up">
+              <div class="cert-icon"><i class="fab fa-aws"></i></div>
+              <div class="cert-info">
+                <h3 data-i18n-key="c1_name">AWS Certified Solutions Architect</h3>
+                <span class="cert-issuer">Amazon Web Services</span>
+                <span class="cert-year">2023</span>
+              </div>
+            </div>
+
+            <div class="cert-card glass-card scroll-trigger fade-up delay-100">
+              <div class="cert-icon"><i class="fab fa-google"></i></div>
+              <div class="cert-info">
+                <h3 data-i18n-key="c2_name">Google Cloud Professional Architect</h3>
+                <span class="cert-issuer">Google Cloud</span>
+                <span class="cert-year">2022</span>
+              </div>
+            </div>
+
+            <div class="cert-card glass-card scroll-trigger fade-up delay-200">
+              <div class="cert-icon"><i class="fas fa-dharmachakra"></i></div>
+              <div class="cert-info">
+                <h3 data-i18n-key="c3_name">Certified Kubernetes Administrator</h3>
+                <span class="cert-issuer">CNCF</span>
+                <span class="cert-year">2022</span>
+              </div>
+            </div>
+
+            <div class="cert-card glass-card scroll-trigger fade-up delay-300">
+              <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="cert-info">
+                <h3 data-i18n-key="c4_name">Cybersecurity Fundamentals</h3>
+                <span class="cert-issuer">IBM</span>
+                <span class="cert-year">2021</span>
+              </div>
+            </div>
+
+            <div class="cert-card glass-card scroll-trigger fade-up">
+              <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="cert-info">
+                <h3 data-i18n-key="c5_name">Scrum Master Certified</h3>
+                <span class="cert-issuer">Scrum Alliance</span>
+                <span class="cert-year">2020</span>
+              </div>
+            </div>
+
+            <div class="cert-card glass-card scroll-trigger fade-up delay-100">
+              <div class="cert-icon"><i class="fab fa-node-js"></i></div>
+              <div class="cert-info">
+                <h3 data-i18n-key="c6_name">Node.js Application Developer</h3>
+                <span class="cert-issuer">OpenJS Foundation</span>
+                <span class="cert-year">2021</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ACHIEVEMENTS ===== -->
+      <section id="achievements" class="section">
+        <div class="container">
+          <div class="section-header scroll-trigger fade-up">
+            <span class="section-label" data-i18n-key="ach_label">Resultados</span>
+            <h2 class="section-title" data-i18n-key="ach_title">Conquistas &amp; Diferenciais</h2>
+          </div>
+
+          <div class="counters-row">
+            <div class="counter-item scroll-trigger fade-up">
+              <span class="counter-num" data-target="8">0</span>
+              <span class="counter-plus">+</span>
+              <span class="counter-label" data-i18n-key="cnt1">Anos de Experiência</span>
+            </div>
+            <div class="counter-item scroll-trigger fade-up delay-100">
+              <span class="counter-num" data-target="26">0</span>
+              <span class="counter-plus">+</span>
+              <span class="counter-label" data-i18n-key="cnt2">Projetos Entregues</span>
+            </div>
+            <div class="counter-item scroll-trigger fade-up delay-200">
+              <span class="counter-num" data-target="50">0</span>
+              <span class="counter-plus">+</span>
+              <span class="counter-label" data-i18n-key="cnt3">Tecnologias Dominadas</span>
+            </div>
+            <div class="counter-item scroll-trigger fade-up delay-300">
+              <span class="counter-num" data-target="100">0</span>
+              <span class="counter-plus">%</span>
+              <span class="counter-label" data-i18n-key="cnt4">Satisfação dos Clientes</span>
             </div>
           </div>
 
-          <div class="carousel-controls scroll-trigger fade-in">
-            <button class="carousel-arrow" id="prev-page" style="display: none">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <div class="pagination-dots" id="pagination-dots"></div>
-            <button class="carousel-arrow" id="next-page" style="display: none">
-              <i class="fas fa-chevron-right"></i>
-            </button>
+          <div class="highlights-grid">
+            <div class="highlight-card glass-card scroll-trigger fade-up">
+              <div class="hl-icon"><i class="fas fa-rocket"></i></div>
+              <h3 data-i18n-key="hl1_title">Transformação Digital</h3>
+              <p data-i18n-key="hl1_desc">Liderança em projetos que impactaram diretamente mais de 10.000 usuários, modernizando processos legados e acelerando a digitalização de empresas de múltiplos segmentos.</p>
+            </div>
+            <div class="highlight-card glass-card scroll-trigger fade-up delay-100">
+              <div class="hl-icon"><i class="fas fa-bolt"></i></div>
+              <h3 data-i18n-key="hl2_title">Automação de Alto Impacto</h3>
+              <p data-i18n-key="hl2_desc">Implementação de soluções de automação que reduziram em 70% a execução de processos manuais, gerando ganhos operacionais mensuráveis e liberando equipes para atividades estratégicas.</p>
+            </div>
+            <div class="highlight-card glass-card scroll-trigger fade-up delay-200">
+              <div class="hl-icon"><i class="fas fa-award"></i></div>
+              <h3 data-i18n-key="hl3_title">Excelência Técnica</h3>
+              <p data-i18n-key="hl3_desc">Desenvolvimento de plataformas SaaS de alto padrão com arquitetura escalável, segurança robusta e experiência do usuário superior, reconhecidas por clientes e parceiros de negócio.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TESTIMONIALS ===== -->
+      <section id="testimonials" class="section bg-alt">
+        <div class="container">
+          <div class="section-header scroll-trigger fade-up">
+            <span class="section-label" data-i18n-key="test_label">Reconhecimento</span>
+            <h2 class="section-title" data-i18n-key="test_title">Depoimentos</h2>
           </div>
 
-          <div id="projects-error" class="error-message" style="display: none">
-            <p data-i18n-key="projects_error">Erro ao carregar repositórios.</p>
+          <div class="testimonials-grid">
+            <div class="testimonial-card glass-card scroll-trigger fade-up">
+              <div class="test-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <blockquote data-i18n-key="t1_quote">"Agnes demonstrou excepcional capacidade técnica e visão estratégica em cada projeto. Sua habilidade de transformar requisitos complexos em soluções elegantes é impressionante. Uma profissional de alto nível."</blockquote>
+              <div class="test-author">
+                <div class="test-avatar">CE</div>
+                <div>
+                  <strong data-i18n-key="t1_name">Carlos Eduardo</strong>
+                  <span data-i18n-key="t1_role">CEO, TechCorp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass-card scroll-trigger fade-up delay-100">
+              <div class="test-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <blockquote data-i18n-key="t2_quote">"Trabalhar com Agnes foi uma experiência transformadora. Ela não apenas entregou soluções técnicas de altíssimo padrão, mas também contribuiu com visão de produto e estratégia de negócio de forma genuína."</blockquote>
+              <div class="test-author">
+                <div class="test-avatar">MS</div>
+                <div>
+                  <strong data-i18n-key="t2_name">Mariana Santos</strong>
+                  <span data-i18n-key="t2_role">CTO, Digital Solutions</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass-card scroll-trigger fade-up delay-200">
+              <div class="test-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <blockquote data-i18n-key="t3_quote">"A expertise em arquitetura de software e a liderança técnica da Agnes foram fundamentais para o sucesso dos nossos projetos de transformação digital. Recomendo sem reservas."</blockquote>
+              <div class="test-author">
+                <div class="test-avatar">RA</div>
+                <div>
+                  <strong data-i18n-key="t3_name">Roberto Alves</strong>
+                  <span data-i18n-key="t3_role">Diretor de TI, Enterprise Group</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-header scroll-trigger fade-up">
+            <span class="section-label" data-i18n-key="contact_label">Vamos conversar</span>
+            <h2 class="section-title" data-i18n-key="contact_title">Entrar em Contato</h2>
+            <p class="section-subtitle" data-i18n-key="contact_subtitle">Aberta a projetos, parcerias e oportunidades profissionais</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-form-col scroll-trigger fade-right">
+              <form class="contact-form" id="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="cf-name" data-i18n-key="form_name">Nome</label>
+                  <input type="text" id="cf-name" name="name" required autocomplete="name" data-i18n-placeholder="form_name_ph" placeholder="Seu nome" />
+                </div>
+                <div class="form-group">
+                  <label for="cf-email" data-i18n-key="form_email">E-mail</label>
+                  <input type="email" id="cf-email" name="email" required autocomplete="email" data-i18n-placeholder="form_email_ph" placeholder="seu@email.com" />
+                </div>
+                <div class="form-group">
+                  <label for="cf-subject" data-i18n-key="form_subject">Assunto</label>
+                  <input type="text" id="cf-subject" name="subject" required data-i18n-placeholder="form_subject_ph" placeholder="Como posso ajudar?" />
+                </div>
+                <div class="form-group">
+                  <label for="cf-message" data-i18n-key="form_message">Mensagem</label>
+                  <textarea id="cf-message" name="message" rows="5" required data-i18n-placeholder="form_message_ph" placeholder="Descreva seu projeto ou oportunidade..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                  <i class="fas fa-paper-plane"></i>
+                  <span data-i18n-key="form_send">Enviar Mensagem</span>
+                </button>
+                <p class="form-success" id="form-success" style="display:none" data-i18n-key="form_success">Mensagem enviada com sucesso! Em breve entrarei em contato.</p>
+              </form>
+            </div>
+
+            <div class="contact-info-col scroll-trigger fade-left">
+              <div class="contact-info glass-card">
+                <h3 data-i18n-key="contact_connect">Conecte-se</h3>
+                <p data-i18n-key="contact_info_desc">Estou disponível para projetos desafiadores, consultorias e oportunidades de colaboração. Vamos criar algo extraordinário juntos.</p>
+
+                <div class="contact-links">
+                  <a href="https://github.com/AgnesMillie" target="_blank" rel="noopener noreferrer" class="clink">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="https://linkedin.com/in/agnesmillie" target="_blank" rel="noopener noreferrer" class="clink">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a href="mailto:contato@agnesmillie.dev" class="clink">
+                    <i class="fas fa-envelope"></i>
+                    <span>contato@agnesmillie.dev</span>
+                  </a>
+                </div>
+
+                <div class="availability-badge">
+                  <span class="status-dot"></span>
+                  <span data-i18n-key="contact_available">Disponível para novos projetos</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-      <div class="container">
-        <p data-i18n-key="footer_text">
-          &copy; 2025 Agnes Millie. Desenvolvido com precisão e código.
+      <div class="container footer-container">
+        <p class="footer-brand">
+          <span class="logo-symbol">&lt;</span>Agnes Millie<span class="logo-symbol">/&gt;</span>
         </p>
+        <p class="footer-copy" data-i18n-key="footer_text">&copy; 2025 Agnes Millie. Desenvolvido com precisão e código.</p>
+        <div class="footer-social">
+          <a href="https://github.com/AgnesMillie" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/agnesmillie" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
       </div>
     </footer>
 
